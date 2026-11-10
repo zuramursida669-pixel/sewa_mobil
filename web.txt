@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Penyewaan Mobil</title>
+    <!-- Menggunakan Tailwind CSS CDN untuk kemudahan styling -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- Font Lucida / Inter / Sans-serif fallback -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- NAVBAR -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo & Branding -->
+            <div class="flex items-center space-x-3">
+                <div class="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                    <!-- Icon Mobil Sederhana -->
+                    <svg xmlns="http://w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10M21 16v-4a2 2 0 00-2-2h-3.172a2 2 0 00-1.414.586l-2.828 2.828A2 2 0 0110.172 13H8" />
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight text-slate-900">Sewa Mobil</h1>
+                    <p class="text-xs text-slate-400 font-light">Mudah • Aman • Terpercaya</p>
+                </div>
+            </div>
+
+            <!-- Menu Navigasi (Static / Tidak Bisa Diklik) -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <span class="text-blue-600 cursor-default">Beranda</span>
+                <span class="hover:text-slate-900 cursor-default">Tentang</span>
+                <span class="hover:text-slate-900 cursor-default">Kontak</span>
+                <div class="p-2 text-slate-700 bg-slate-100 rounded-lg cursor-default">
+                    <!-- Hamburger Menu Icon -->
+                    <svg xmlns="http://w3.org" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-white overflow-hidden border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 pt-16 pb-20 lg:pt-24 lg:pb-28 flex flex-col lg:flex-row items-center justify-between gap-12">
+            <!-- Teks Hero -->
+            <div class="max-w-xl space-y-6 z-10">
+                <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                    Sistem Informasi <br>
+                    <span class="text-slate-900">Penyewaan Mobil</span>
+                </h2>
+                <p class="text-slate-500 text-base lg:text-lg leading-relaxed font-light">
+                    Solusi praktis untuk menyewa mobil dengan mudah, cepat, dan aman. Temukan kendaraan yang sesuai untuk perjalanan Anda.
+                </p>
+                <div>
+                    <span class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-blue-600 rounded-xl shadow-md shadow-blue-200 cursor-default">
+                        Mulai Sekarang &nbsp; →
+                    </span>
+                </div>
+            </div>
+
+            <!-- Gambar Mobil -->
+            <div class="w-full lg:w-1/2 flex justify-center lg:justify-end relative">
+                <!-- Menggunakan gambar mobil putih berkualitas tinggi yang menyerupai aset asli -->
+                <img src="https://unsplash.com" 
+                     alt="Mobil Sewa" 
+                     class="w-full max-w-[550px] object-cover rounded-2xl transform lg:scale-110 lg:translate-x-10 transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="max-w-7xl mx-auto px-6 py-16 lg:py-20 text-center">
+        <!-- Judul Section -->
+        <div class="flex items-center justify-center space-x-4 mb-12">
+            <div class="h-[1px] w-16 bg-slate-200"></div>
+            <h3 class="text-2xl font-bold text-slate-800 tracking-wide">Layanan Kami</h3>
+            <div class="h-[1px] w-16 bg-slate-200"></div>
+        </div>
+
+        <!-- Grid Layanan -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Card 1: Pilihan Mobil -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center text-center space-y-4">
+                <div class="p-3 bg-blue-50 text-blue-500 rounded-xl">
+                    <svg xmlns="http://w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10M21 16v-4a2 2 0 00-2-2h-3.172a2 2 0 00-1.414.586l-2.828 2.828A2 2 0 0110.172 13H8" />
+                    </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Pilihan Mobil Lengkap</h4>
+                <p class="text-xs text-slate-400 font-light">Berbagai jenis mobil tersedia</p>
+            </div>
+
+            <!-- Card 2: Transaksi Aman -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center text-center space-y-4">
+                <div class="p-3 bg-blue-50 text-blue-500 rounded-xl">
+                    <svg xmlns="http://w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Transaksi Aman</h4>
+                <p class="text-xs text-slate-400 font-light">Data Anda terlindungi</p>
+            </div>
+
+            <!-- Card 3: Proses Cepat -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center text-center space-y-4">
+                <div class="p-3 bg-amber-50 text-amber-500 rounded-xl">
+                    <svg xmlns="http://w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Proses Cepat</h4>
+                <p class="text-xs text-slate-400 font-light">Penyewaan lebih mudah</p>
+            </div>
+
+            <!-- Card 4: Customer Support -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center text-center space-y-4">
+                <div class="p-3 bg-blue-50 text-blue-500 rounded-xl">
+                    <svg xmlns="http://w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Customer Support</h4>
+                <p class="text-xs text-slate-400 font-light">Siap membantu 24 jam</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-100 py-6 text-center text-xs text-slate-400 font-light">
+        <div class="max-w-7xl mx-auto px-6">
+            &copy; 2026 Sewa Mobil - Informasi kendaraan dan penyewaan.
+        </div>
+    </footer>
+
+</body>
+</html>
